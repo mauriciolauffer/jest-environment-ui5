@@ -7,6 +7,6 @@
     "coverage": "jest run --coverage"
   },
   "dependencies": {
-    "jest-environment-ui5": "link:..\\.."
+    "jest-environment-ui5": "link:../.."
   }
 }
