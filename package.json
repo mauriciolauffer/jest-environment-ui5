@@ -1,6 +1,6 @@
 {
   "name": "jest-environment-ui5",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "jest testing environment for UI5",
   "private": false,
   "author": "Mauricio Lauffer",
