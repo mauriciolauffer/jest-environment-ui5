@@ -1,0 +1,33 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions: read-all
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [20, 22, 24]
+    permissions:
+      security-events: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: pnpm
+      - run: pnpm i --prefer-offline
+      - run: pnpm run lint:ci
+      - run: pnpm run build
+      - name: Install local jest-environment-ui5 for testing
+        run: pnpm i --prefix test/env-ui5
+      - run: pnpm run test
+      - uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: eslint.sarif

@@ -1,0 +1,72 @@
+{
+  "name": "jest-environment-ui5",
+  "version": "0.2.2",
+  "description": "jest testing environment for UI5",
+  "private": false,
+  "author": "Mauricio Lauffer",
+  "license": "MIT",
+  "homepage": "https://github.com/mauriciolauffer/jest-environment-ui5#readme",
+  "type": "module",
+  "packageManager": "pnpm@9.15.4",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "jest",
+    "jest-environment",
+    "testing",
+    "unit-testing",
+    "sap",
+    "ui5",
+    "openui5",
+    "sapui5"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "lint": "eslint --cache && prettier --check --cache .",
+    "lint:ci": "eslint src -f @microsoft/eslint-formatter-sarif -o eslint.sarif",
+    "test": "pnpm --prefix test/env-ui5 test",
+    "test:env": "jest",
+    "test:ci": "pnpm --prefix test/env-ui5 test:ci",
+    "pretty": "prettier --write --cache ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mauriciolauffer/jest-environment-ui5.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mauriciolauffer/jest-environment-ui5/issues"
+  },
+  "dependencies": {
+    "@jest/environment": "^30.0.4",
+    "@jest/environment-jsdom-abstract": "^30.0.4",
+    "@jest/fake-timers": "30.0.4",
+    "canvas": "^3.1.2",
+    "jest-environment-jsdom": "^30.0.4",
+    "jest-util": "30.0.2",
+    "jsdom": "^26.1.0"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.27.1",
+    "@jest/test-utils": "^0.0.0",
+    "@jest/types": "30.0.1",
+    "@types/jest": "^30.0.0",
+    "@types/jsdom": "^21.1.7",
+    "@types/node": "^24.0.10",
+    "@types/openui5": "^1.136.0",
+    "eslint": "^9.30.1",
+    "eslint-config-mlauffer-nodejs": "^3.1.0",
+    "eslint-plugin-jest": "^29.0.1",
+    "jest-mock": "30.0.2",
+    "prettier": "^3.6.2",
+    "ts-jest": "^29.4.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.35.1"
+  },
+  "peerDependencies": {
+    "jest": ">=30"
+  }
+}

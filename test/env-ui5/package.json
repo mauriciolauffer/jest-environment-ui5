@@ -1,0 +1,12 @@
+{
+  "name": "test-env-ui5",
+  "private": true,
+  "scripts": {
+    "test": "jest --detectOpenHandles",
+    "test:ci": "jest run",
+    "coverage": "jest run --coverage"
+  },
+  "dependencies": {
+    "jest-environment-ui5": "link:../.."
+  }
+}
