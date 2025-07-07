@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.4](https://github.com/mauriciolauffer/jest-environment-ui5/compare/v0.2.3...v0.2.4) (2025-07-07)
+
+
+### Bug Fixes
+
+* README ([95fcdba](https://github.com/mauriciolauffer/jest-environment-ui5/commit/95fcdba981e5fd644a982897080d94e61f8643ca))
+
 ## 0.2.3 (2025-07-07)
 
 
