@@ -1,3 +1,4 @@
+// TODO: use jest.config.ts to set the environment options
 describe.skip("Load test from file", () => {
   it.skip("ui5 env is defined", () => {
     const environmentOptions = globalThis?.config?.environmentOptions;
