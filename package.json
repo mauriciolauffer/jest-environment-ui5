@@ -46,7 +46,7 @@
     "@jest/fake-timers": "30.0.4",
     "canvas": "^3.1.2",
     "jest-environment-jsdom": "^30.0.4",
-    "jest-util": "30.0.2",
+    "jest-util": "30.0.5",
     "jsdom": "^26.1.0"
   },
   "devDependencies": {
